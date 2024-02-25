@@ -40,7 +40,7 @@ export const CarCard = ({ car, index }) => {
   } = car;
 
   const city = address?.split(", ").slice(-2);
-  const firstFunc = functionalities[0];
+  const firstFunc = functionalities?.[0];
   const editedFirstFunc = firstFunc.split(" ");
   const finalFunc = editedFirstFunc.splice(0, 1).join(" ");
 

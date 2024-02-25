@@ -4,6 +4,7 @@ import {
   selectFilter,
   selectGetCars,
   selectGetAllCars,
+  selectPage,
 } from "../../src/redux/selectors";
 import { useSelector, useDispatch } from "react-redux";
 import { CarsList } from "../components/Catalog/CarsList/CarsList";
@@ -20,34 +21,30 @@ import { LoadMore } from "../../src/components/LoadMore/LoadMore";
 
 const Catalog = () => {
   const [loadMore, setLoadMore] = useState(false);
-  const [page, setPage] = useState(1);
 
+  const page = useSelector(selectPage);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const cars = useSelector(selectGetCars);
-  console.log("CARS WITH pagination:", cars);
   const filter = useSelector(selectFilter);
   const allCars = useSelector(selectGetAllCars);
-  console.log("All cars:", allCars);
   const dispatch = useDispatch();
 
   const totalNumberOfPages = Math.ceil(allCars.length / LIMIT);
-  console.log(totalNumberOfPages);
 
   useEffect(() => {
-    if (page === 1) {
-      dispatch(fetchCars(page));
+    if (page === 1 && cars.length === 0) {
+      dispatch(fetchCars());
       dispatch(fetchAllCars());
       setLoadMore(true);
     }
-    dispatch(fetchCars(page + 1));
-  }, [dispatch, page, cars.length]);
+  }, [dispatch, page, cars]);
 
   const clickLoadMore = () => {
     if (page < totalNumberOfPages) {
       setLoadMore(true);
+      dispatch(fetchCars(page));
     }
-    setPage(page + 1);
   };
 
   const visibleCarsMake =
