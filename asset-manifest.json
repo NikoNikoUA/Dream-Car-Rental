@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Dream-Car-Rental/static/css/main.7cda0caf.css",
+    "main.js": "/Dream-Car-Rental/static/js/main.f97c295c.js",
+    "static/js/573.7f16a6e3.chunk.js": "/Dream-Car-Rental/static/js/573.7f16a6e3.chunk.js",
+    "static/js/12.cf65463e.chunk.js": "/Dream-Car-Rental/static/js/12.cf65463e.chunk.js",
+    "static/js/26.f074564b.chunk.js": "/Dream-Car-Rental/static/js/26.f074564b.chunk.js",
+    "static/js/900.0950500e.chunk.js": "/Dream-Car-Rental/static/js/900.0950500e.chunk.js",
+    "static/js/963.ea4324d6.chunk.js": "/Dream-Car-Rental/static/js/963.ea4324d6.chunk.js",
+    "static/js/150.96899f8d.chunk.js": "/Dream-Car-Rental/static/js/150.96899f8d.chunk.js",
+    "static/js/324.94f28b6a.chunk.js": "/Dream-Car-Rental/static/js/324.94f28b6a.chunk.js",
+    "static/media/car-gdd62e2388_1280.jpg": "/Dream-Car-Rental/static/media/car-gdd62e2388_1280.b478b9c69a44aa40372c.jpg",
+    "static/media/sprite.svg": "/Dream-Car-Rental/static/media/sprite.65706555d35b9d51a33ec9d183aabfc6.svg",
+    "index.html": "/Dream-Car-Rental/index.html",
+    "main.7cda0caf.css.map": "/Dream-Car-Rental/static/css/main.7cda0caf.css.map",
+    "main.f97c295c.js.map": "/Dream-Car-Rental/static/js/main.f97c295c.js.map",
+    "573.7f16a6e3.chunk.js.map": "/Dream-Car-Rental/static/js/573.7f16a6e3.chunk.js.map",
+    "12.cf65463e.chunk.js.map": "/Dream-Car-Rental/static/js/12.cf65463e.chunk.js.map",
+    "26.f074564b.chunk.js.map": "/Dream-Car-Rental/static/js/26.f074564b.chunk.js.map",
+    "900.0950500e.chunk.js.map": "/Dream-Car-Rental/static/js/900.0950500e.chunk.js.map",
+    "963.ea4324d6.chunk.js.map": "/Dream-Car-Rental/static/js/963.ea4324d6.chunk.js.map",
+    "150.96899f8d.chunk.js.map": "/Dream-Car-Rental/static/js/150.96899f8d.chunk.js.map",
+    "324.94f28b6a.chunk.js.map": "/Dream-Car-Rental/static/js/324.94f28b6a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7cda0caf.css",
+    "static/js/main.f97c295c.js"
+  ]
+}
