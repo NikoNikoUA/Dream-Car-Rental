@@ -12,6 +12,7 @@ import {
   ButtonCard,
   Item,
   CustomModal,
+  ButtonHeart,
 } from "./CarCard.styled";
 import { CarInfoForm } from "../../../../src/components/Catalog/CarInfoForm/CarInfoForm";
 import { useSelector, useDispatch } from "react-redux";
@@ -67,14 +68,16 @@ export const CarCard = ({ car, index }) => {
   return (
     <CardContainer>
       <Img src={img} alt="car" height="274px" width="269px" />
-      <Svg
-        isCarFavorite={isCarFavorite}
-        width="18px"
-        height="18px"
-        onClick={onHeartClick}
-      >
-        <use href={`${icons}#icon-heart`}></use>
-      </Svg>
+      <ButtonHeart>
+        <Svg
+          isCarFavorite={isCarFavorite}
+          width="18px"
+          height="18px"
+          onClick={onHeartClick}
+        >
+          <use href={`${icons}#icon-heart`}></use>
+        </Svg>
+      </ButtonHeart>
       <FirstLineContainer>
         <p>
           {make}

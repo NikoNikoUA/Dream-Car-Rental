@@ -14,10 +14,10 @@ export const SharedLayout = () => {
               <Link to="/">Home</Link>
             </Li>
             <Li>
-              <Link to="catalog">Catalog</Link>
+              <Link to="/catalog">Catalog</Link>
             </Li>
             <Li>
-              <Link to="favorites">Favorites</Link>
+              <Link to="/favorites">Favorites</Link>
             </Li>
           </Ul>
         </NavHeader>

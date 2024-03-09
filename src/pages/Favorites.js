@@ -1,5 +1,5 @@
 import Modal from "react-modal";
-import { Container, FavCarsContainer } from "../Container.styled";
+import { Container, FavCarsContainer, TextFav } from "../Container.styled";
 import { useSelector } from "react-redux";
 import {
   selectError,
@@ -17,7 +17,7 @@ const Favourites = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
-  return (
+  return favCars && favCars.length > 0 ? (
     <Container>
       {isLoading && !error && <Loader />}
       <FavCarsContainer>
@@ -28,6 +28,8 @@ const Favourites = () => {
         ))}
       </FavCarsContainer>
     </Container>
+  ) : (
+    <TextFav>Please, add cars to favorites</TextFav>
   );
 };
 

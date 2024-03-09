@@ -12,15 +12,25 @@ export const Img = styled.img`
   width: 274px;
   height: 268px;
   margin-bottom: 14px;
+  object-fit: fill;
+`;
+
+export const ButtonHeart = styled.button`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 `;
 
 export const Svg = styled.svg`
   position: absolute;
-  top: 14px;
-  right: 14px;
-  /* fill: none; */
+  top: 0;
+  right: 0;
   stroke-width: 1.5px;
   /* stroke: rgba(255, 255, 255, 0.8); */
+  cursor: pointer;
 
   fill: ${(props) =>
     props.isCarFavorite ? props.theme.colors.mainColor : "none"};
@@ -28,6 +38,12 @@ export const Svg = styled.svg`
     props.isCarFavorite
       ? props.theme.colors.mainColor
       : "rgba(255, 255, 255, 0.8)"};
+
+  transition: stroke 250ms ease-in-out;
+
+  &:hover {
+    stroke: white;
+  }
 `;
 
 export const Span = styled.span`

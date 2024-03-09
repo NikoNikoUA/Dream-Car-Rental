@@ -67,3 +67,12 @@ export const NotFoundMessage = styled.div`
   color: red;
   font-size: 18px;
 `;
+
+export const TextFav = styled.p`
+  font-size: 40px;
+  color: ${(props) => props.theme.colors.mainColor};
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+`;

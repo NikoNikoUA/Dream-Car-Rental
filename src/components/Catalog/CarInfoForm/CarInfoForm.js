@@ -17,6 +17,8 @@ import {
   SpanColor,
   RentalLi,
   ButtonRental,
+  PicContainer,
+  ButtonClose,
 } from "./CarInfoForm.styled";
 
 export const CarInfoForm = ({ car, closeModalWindow, index }) => {
@@ -67,11 +69,14 @@ export const CarInfoForm = ({ car, closeModalWindow, index }) => {
 
   return (
     <Forma>
-      <Svg onClick={closeModalWindow} width="24px" height="24px">
-        <use href={`${icons}#icon-modal-cross`}></use>
-      </Svg>
-
-      <Img src={img} alt="car" height="248px" width="461px" />
+      <ButtonClose>
+        <Svg onClick={closeModalWindow} width="24px" height="24px">
+          <use href={`${icons}#icon-modal-cross`}></use>
+        </Svg>
+      </ButtonClose>
+      <PicContainer>
+        <Img src={img} alt="car" height="248px" width="461px" />
+      </PicContainer>
       <FirstLineContainer>
         <p>
           {make}

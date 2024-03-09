@@ -2,11 +2,19 @@ import styled from "styled-components";
 
 export const Forma = styled.div``;
 
-export const Svg = styled.svg`
+export const ButtonClose = styled.button`
   position: absolute;
   top: 16px;
   right: 16px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+`;
+
+export const Svg = styled.svg`
+  position: absolute;
+  top: 0;
+  right: 0;
 `;
 
 export const Img = styled.img`
@@ -14,6 +22,11 @@ export const Img = styled.img`
   width: 461px;
   height: 248px;
   margin-bottom: 14px;
+  object-fit: cover;
+`;
+
+export const PicContainer = styled.div`
+  overflow: hidden;
 `;
 
 export const Span = styled.span`
