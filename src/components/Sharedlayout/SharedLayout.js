@@ -8,7 +8,7 @@ export const SharedLayout = () => {
     <section>
       <header>
         <NavHeader>
-          <LogoText>DCR</LogoText>
+          <LogoText to="/">DCR</LogoText>
           <Ul>
             <Li>
               <Link to="/">Home</Link>

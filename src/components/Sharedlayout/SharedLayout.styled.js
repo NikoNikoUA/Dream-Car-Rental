@@ -11,7 +11,7 @@ export const NavHeader = styled.nav`
     inset 0 0 40px rgba(0, 0, 0, 0.1);
 `;
 
-export const LogoText = styled.p`
+export const LogoText = styled(NavLink)`
   font-size: 50px;
   font-weight: bold;
   background-image: radial-gradient(
