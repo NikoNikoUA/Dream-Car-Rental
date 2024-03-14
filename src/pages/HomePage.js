@@ -12,10 +12,8 @@ const HomePage = () => {
       {isLoading && !error && <Loader />}
 
       <Text>
-        Welcome to <Span>DCR</Span> - Your <Span>Dream Car Rental</Span>
-        company. Here, you can find a car that will satisfy the needs of the
-        most demanding customer. Make your choice now and hit the road with
-        <Span>DCR</Span>!
+        <Span>DreamCarRental</Span> is your reliable partner in car rental
+        business!
       </Text>
     </Background>
   );

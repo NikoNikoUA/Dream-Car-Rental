@@ -47,6 +47,10 @@ export const Forma = styled(Form)`
   align-items: flex-end;
   justify-content: center;
   gap: 18px;
+
+  & > Field:hover {
+    border-color: red;
+  }
 `;
 
 export const InputField = styled.input`
@@ -61,12 +65,6 @@ export const InputField = styled.input`
 
   line-height: 1.11111;
   color: #121417;
-
-  &.inputPrice {
-    padding: 14px 18px;
-    width: 125px;
-    height: 48px;
-  }
 
   &.inputFrom {
     border-right: 1px solid rgba(138, 138, 137, 0.2);

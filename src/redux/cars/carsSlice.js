@@ -24,13 +24,10 @@ const carsSlice = createSlice({
       .addCase(fetchCars.pending, handlePending)
       .addCase(fetchCars.fulfilled, (state, action) => {
         state.page = state.page + 1;
-        console.log(state.page);
         state.isLoading = false;
         state.error = null;
         state.cars = [...state.cars, ...action.payload];
-        console.log(state.cars);
         state.allCars = [...state.allCars, ...action.payload];
-        console.log(state.allCars);
       })
       .addCase(fetchCars.rejected, handleRejected)
       .addCase(fetchAllCars.pending, handlePending)

@@ -3,7 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const filterSlice = createSlice({
   name: "filter",
   initialState: {
-    filter: null,
+    filter: {
+      make: "",
+      price: "",
+      mileageFrom: "",
+      mileageTo: "",
+    },
   },
   reducers: {
     filterValue(state, action) {

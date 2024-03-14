@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const SectionContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
+`;
+
 // ====================== Home Page =======================
 
 export const Background = styled.section`
@@ -10,20 +20,21 @@ export const Background = styled.section`
   background-size: cover;
   z-index: 10;
   position: absolute;
-  width: 100%;
-  height: 85%;
+  width: 800px;
+  height: 400px;
+  border-radius: 10px;
 `;
 
 export const Text = styled.p`
   position: absolute;
-  top: 80px;
-  left: 100px;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
   width: 700px;
   color: black;
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 `;
 
 export const Span = styled.span`
@@ -35,6 +46,7 @@ export const Span = styled.span`
 // =================== Catalog =========================
 
 export const Container = styled.div`
+  position: relative;
   min-width: 1440px;
   padding: 100px 128px;
   display: flex;
@@ -74,5 +86,4 @@ export const TextFav = styled.p`
   font-weight: bold;
   display: flex;
   justify-content: center;
-  margin-top: 15%;
 `;

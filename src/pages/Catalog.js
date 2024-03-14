@@ -54,12 +54,24 @@ const Catalog = () => {
         )
       : cars;
 
+  // cars.filter((car) => {
+  //   const makeMatch =
+  //     filter.make === "all" ||
+  //     car.make.toLowerCase() === filter.make.toLowerCase();
+  //   const priceMatch =
+  //     filter.price === "all" || car.price === parseInt(filter.price);
+  //   return makeMatch && priceMatch;
+  // });
+
   return (
     <Container>
       {isLoading && !error && <Loader />}
       <ComponentsContainer>
         <Filter />
         <CarsList visibleCarsMake={visibleCarsMake} />
+        {cars.length === 0 && !isLoading && (
+          <p>Sorry, no matches were found. Please try again.</p>
+        )}
         {loadMore && page < totalNumberOfPages && (
           <LoadMore clickLoadMore={clickLoadMore} />
         )}

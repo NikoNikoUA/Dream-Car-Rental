@@ -5,8 +5,8 @@ import {
   Label,
   InputContainer,
   Forma,
-  InputField,
   MilageInputs,
+  InputField,
 } from "./Filter.styled";
 import { useDispatch } from "react-redux";
 import { filterValue } from "../../../redux/filter/filterSlice";
@@ -29,7 +29,6 @@ const Filter = () => {
       }}
       validationSchema={schema}
       onSubmit={(values, action) => {
-        console.log(values);
         dispatch(filterValue(values));
 
         action.resetForm();
@@ -84,12 +83,41 @@ const Filter = () => {
 
         <InputContainer>
           <Label htmlFor="price">Price/ 1 hour</Label>
-          <InputField
-            className="inputPrice"
-            // as="select"
+          <Field
+            style={{
+              borderRadius: "14px",
+
+              width: "135px",
+              height: "48px",
+              backgroundColor: "#f7f7fb",
+              border: "none",
+              fontWeight: "500",
+              fontSize: "18px",
+
+              lineHeight: "1.11111",
+              color: "#121417",
+              padding: "14px 18px",
+            }}
+            as="select"
             name="price"
             placeholder="To $"
-          />
+          >
+            <option value="all">All prices</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+            <option value="75">75</option>
+            <option value="100">100</option>
+            <option value="150">150</option>
+            <option value="200">200</option>
+            <option value="250">250</option>
+            <option value="300">300</option>
+            <option value="500">500</option>
+          </Field>
         </InputContainer>
 
         <InputContainer>
@@ -100,6 +128,7 @@ const Filter = () => {
               name="mileageFrom"
               placeholder="From"
             />
+
             <Label htmlFor="mileageTo"></Label>
             <InputField className="inputTo" name="mileageTo" placeholder="To" />
           </MilageInputs>
